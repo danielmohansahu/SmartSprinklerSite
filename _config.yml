@@ -14,9 +14,9 @@ gems:				 [jekyll-paginate]
 
 # About/contact
 author:
-  name:              Mark Otto
+  name:              Daniel Sahu
   url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  email:             danielmohansahu@gmail.com
 
 # Custom vars
 version:             1.0.0
