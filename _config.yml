@@ -4,11 +4,11 @@
 permalink:           pretty
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
-baseurl:             '/SmartSprinklerSite/'
+title:               SmartSprinkler
+tagline:             'the simple solution'
+description:         'An elegant <a href="http://jekyllrb.com" target="_blank">solution</a> for a dangerous problem.'
+url:                 https://SmartSprinkler.com
+baseurl:             '/SmartSprinklerSite'
 paginate:            5
 gems:				 [jekyll-paginate]
 
@@ -19,4 +19,4 @@ author:
   email:             danielmohansahu@gmail.com
 
 # Custom vars
-version:             1.0.0
+version:             0.0.1
