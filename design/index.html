@@ -71,6 +71,18 @@
         
       
     
+      
+        
+          <a class="sidebar-nav-item" href="/SmartSprinklerSite//media/">Media</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/SmartSprinklerSite//team/">Team</a>
+        
+      
+    
 
     <span class="sidebar-nav-item">Currently v0.0.1</span>
   </nav>
@@ -98,33 +110,60 @@
       <div class="container content">
         <div class="page">
   <h1 class="page-title">Design</h1>
-  <p>This page provides an overview of our design process. Significant project milestones are discussed below, and we conclude with a discussion on suggested future improvements.</p>
+  <p>This page provides an overview of our design process. Significant project components are discussed below.</p>
 
-<h2 id="overview">Overview</h2>
+<h2 id="the-eye-sensor">The Eye (Sensor)</h2>
 
-<ul>
-  <li>Lorum Ipsum, etc. etc.</li>
-  <li>Lorum Ipsum, etc. etc.</li>
-  <li>Lorum Ipsum, etc. etc.</li>
-</ul>
+<h3 id="making-a-cheap-infrared-camera">Making a Cheap Infrared Camera</h3>
 
-<h2 id="milestones">Milestones</h2>
+<p>Infrared cameras easily pick up the intense radiation emitted by open flames. In addition, these cameras operate up to ranges large enough to cover a decent-sized room. Unfortunately though, commercially available infrared cameras can cost upwards of $1000, so we needed an alternative.</p>
 
-<ul>
-  <li>Raindrops on roses</li>
-  <li>Whiskers on kittens</li>
-  <li>Brown paper packages tied up with string</li>
-</ul>
+<p>The solution was to remove the infrared filter from a cheap USB web camera. This filter (indicated by the red circle in the image below) blocks incoming infrared light to the camera’s sensor. By replacing the infrared filter with a visible light filter we were able to only allow infrared light to pass.</p>
 
-<h2 id="going-forward">Going Forward</h2>
+<p><img src="/SmartSprinklerSite/Public/webcam.jpg" alt="webcam" title="Original Webcam" />
+<img src="/SmartSprinklerSite/Public/stripped_webcam.jpg/200x100" alt="webcamstripped" title="Modified Webcam" /></p>
 
-<ul>
-  <li>Detection of “safe” flame sources, such as cigarettes and gas stove burners.</li>
-  <li>Creation of a periodic wide-angle detection scan to save power. Detection on this would lead to the high-fidelity scanning detailed above.</li>
-  <li>Siren or Alarm feature on successful flame detection.</li>
-</ul>
+<p>The following two images were both taken without the infrared blocking filter. The image on the right was taken with the addition of the visible light blocking filters. Both images are of a lighter taken at the same location.</p>
 
-<p>Have questions or suggestions? Please <a href="/contact">contact us</a>!</p>
+<p><img src="/SmartSprinklerSite/Public/aaron_vis.jpg" alt="IRandVIS" title="Camera with IR Filter Removed" />
+<img src="/SmartSprinklerSite/Public/aaron_ir_only.jpg" alt="IRonly" title="Camera with IR Filter Replaced with Visible Light Filter" /></p>
+
+<p>Clearly, blocking visible light is necessary. Even though the fire is still the brightest thing in the picture on the left, the white objects, such as the pc in the background, could be a source of error in estimating the location of our flame. Knowing the location of the flame accurately allows us to douse the fire by rotating the camera until the centroid of white color (i.e. the center of the fire) is at the center of the image.</p>
+
+<h3 id="ruling-out-an-infrared-thermometer">Ruling out an Infrared Thermometer</h3>
+
+<p>We needed a sensor with a large enough field of view and range to cover the hemisphere encompassed by a room. Typical infrared, non-contact, temperature measuring devices within our price range are great for detecting fires, but only at a very short ranges (less than three feet for a small fire). In addition, while those sensors have a decent field of view, they function by averaging all of the temperatures within their field of view, so a small fire at a distance goes virtually undetected. The range limitations of this type of sensor ultimately caused us to rule it out.</p>
+
+<p><img src="/SmartSprinklerSite/Public/ir_thermometer.jpg" alt="IRThermometer" title="Infrared Thermometer" /></p>
+
+<h2 id="the-brain-microcontroller">The Brain (Microcontroller)</h2>
+
+<p>Detecting the location of a flame in an image requires image processing, so we chose a microcontroller capable of doing so. We went with the <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2B</a> because it lends itself well to the use of the OpenCV Python image processing libraries. These libraries include built in functions for capturing images, converting to black and white, and finding the centroid of an image. In addition, the 2B model has two hardware PWM units, which are useful for controlling servo motors.</p>
+
+<p><img src="/SmartSprinklerSite/Public/raspberry_pi.png" alt="RaspberryPi2B" title="Raspberry Pi 2B" /></p>
+
+<h2 id="the-body-structure">The Body (Structure)</h2>
+
+<h2 id="the-nervous-system-circuits">The Nervous System (Circuits)</h2>
+
+<h2 id="the-heart-power-source">The Heart (Power Source)</h2>
+
+<p>The system is entirely battery powered. We chose this to allow for easier integration into existing households and to mimic normal fire sprinklers.</p>
+
+<p><img src="/SmartSprinklerSite/Public/power_source.jpg/" alt="batterypack" title="Power Source" /></p>
+
+<h2 id="the-hand-water-sprayer">The Hand (Water Sprayer)</h2>
+
+<h2 id="the-muscles-motors">The Muscles (Motors)</h2>
+<p>(Yes, we’re done with the body metaphor.)</p>
+
+<p>Servo motors were an easy choice when designing the turret. They allow for precise movement between known positions, which is exactly what we needed to scan for and target fires.</p>
+
+<p>During the course of our design process we were forced to upgrade the servo motors to a more powerful version, as the inertial weight and friction of our system was larger than anticipated.</p>
+
+<p><img src="/SmartSprinklerSite/Public/servo.jpg" alt="servomotors" title="Servo Motors" /></p>
+
+<p>Have questions or suggestions? Please <a href="/SmartSprinklerSite/team">contact us</a>!</p>
 
 </div>
 
