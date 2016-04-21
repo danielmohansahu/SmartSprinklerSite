@@ -156,6 +156,12 @@
 
 <center><img src="/SmartSprinklerSite/public/power_source.jpg" height="60%" width="60%" align="middle" /></center>
 
+<h2 id="the-vascular-system-circuit">The Vascular System (Circuit)</h2>
+
+<p>We have a simple circuit we milled out on a PCB which attaches to the Pi like a shield. This contains the linear regulator for the servo motors, transistors for the water cannon, a software shutdown switch for the Pi, and well as the needed connectors. The idea behind the design was to have one easy plug-and-play board for all the hardware needed for operation of the system.</p>
+
+<center><img src="/SmartSprinklerSite/public/circuit_diagram.png" height="60%" width="60%" align="middle" /></center>
+
 <h2 id="the-muscles-motors">The Muscles (Motors)</h2>
 <p>(Yes, we’re done with the body metaphor.)</p>
 
@@ -164,6 +170,18 @@
 <p>During the course of our design process we were forced to upgrade the servo motors to a more powerful version, as the initial weight and friction of our system was larger than anticipated.</p>
 
 <center><img src="/SmartSprinklerSite/public/servo.jpg" height="60%" width="60%" align="middle" /></center>
+
+<h2 id="the-hand-water-cannon">The Hand (Water Cannon)</h2>
+
+<p>To spray water on the fire an electric Nerf water gun was disassembled and the pump taken out and used. In a final product this pump would be replaced by a water line connected directly to the water mains of the building (by means of a swivel to allow for motion of system) and controlled by a valve operated by the Pi.</p>
+
+<center><img src="/SmartSprinklerSite/public/water_gun.png" height="60%" width="60%" align="middle" /></center>
+
+<h2 id="the-body-housing">The Body (Housing)</h2>
+
+<p>The housing for the SmartSprinkler was model in SolidWorks and then exported as .stl files for 3D printing. The motivation driving the design of the sprinkler was the need to have a self contained system that would house all the components while allowing coverage of a complete hemisphere. To achieve this end, a ball bearing is used to couple the top mount of the SmartSprinkler to the main housing (allowing for yaw motion) and the turret holding the camera and water cannon is mounted using a pivot (to allow for pitch control). These two together provided the range of motion needed. There is an internal cage within the housing that holds the batteries and Raspberry Pi and the housing itself has a removable door to allow access to the internals without the need to completely disassemble the sprinkler.</p>
+
+<center><img src="/SmartSprinklerSite/public/housing.png" height="60%" width="60%" align="middle" /></center>
 
 <p>Have questions or suggestions? Please <a href="/SmartSprinklerSite/team">contact us</a>!</p>
 
