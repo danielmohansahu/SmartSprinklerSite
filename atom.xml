@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>SmartSprinkler</title>
- <link href="https://SmartSprinkler.com/SmartSprinklerSite/atom.xml" rel="self"/>
- <link href="https://SmartSprinkler.com/SmartSprinklerSite/"/>
- <updated>2016-04-26T07:07:42+08:00</updated>
- <id>https://SmartSprinkler.com</id>
+ <title>VB</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2016-06-15T07:56:15-07:00</updated>
+ <id></id>
  <author>
    <name>Daniel Sahu</name>
    <email>danielmohansahu@gmail.com</email>
@@ -13,17 +13,16 @@
 
  
  <entry>
-   <title>Introducing SmartSprinklers</title>
-   <link href="/SmartSprinklerSite/2016/02/21/introduction/"/>
-   <updated>2016-02-21T00:00:00+08:00</updated>
-   <id>https://SmartSprinkler.com/SmartSprinklerSite/2016/02/21/introduction</id>
-   <content type="html">&lt;center&gt;&lt;img src=&quot;/SmartSprinklerSite/public/82go1g.gif&quot; height=&quot;25%&quot; width=&quot;25%&quot; /&gt;&lt;/center&gt;
+   <title>Introduction</title>
+   <link href="/2016/02/21/introduction/"/>
+   <updated>2016-02-21T00:00:00-08:00</updated>
+   <id>/2016/02/21/introduction</id>
+   <content type="html">&lt;h1&gt;Bookmarks are the future of communicative media. Don&#39;t be left behind.
 
-&lt;p&gt;The Smart Sprinkler project was born from a desire to raise the bar of emergency fire prevention technology. &lt;a href=&quot;https://en.wikipedia.org/wiki/Fire_sprinkler&quot;&gt;Normal fire sprinklers&lt;/a&gt; just douse the entire area with water, whether the detected fire is tiny or gigantic. This approach, although simple and easy to implement, is inefficient and can lead to the unnecessary loss of millions of dollars worth of electronics and other water-sensitive supplies. Sometimes a sprinkler going off can cause more damage than the fire itself!&lt;/p&gt;
+&lt;p&gt;
 
-&lt;p&gt;Our team believes that just because a technology is standard does not mean that it cannot be improved. The inspiration behind the Smart Sprinkler was to take advantage of the ubiquitiveness these days (and therefore inexpensiveness!) of single board computers and infrared sensing technology to target and spray only the flame itself. This approach is much more efficient and minimizes damage to water-sensitive equipment. In addition to this substantial improvement over standard sprinklers, the Smart Sprinkler also offers a more prevention-oriented strategy for putting out fires. By targeting small fires before they can grow, the device can prevent a blaze large enough to even activate standard fire alarms!&lt;/p&gt;
-
-&lt;p&gt;We expect the Smart Sprinkler to become the new standard for indoor fire prevention.&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/public/mirage-bookmark-gift-shop-120.jpg&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/center&gt;
+&lt;/p&gt;&lt;/h1&gt;
 </content>
  </entry>
  
